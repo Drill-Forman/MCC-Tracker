@@ -25,6 +25,7 @@ classDiagram
    }
 
    class HealthTracker {
+        <<Abstract>>
        + DEFAULT_WEIGHT : double = 100.0$
        + DEFAULT_HEIGHT : int = 100$
        - weight : double
@@ -39,6 +40,7 @@ classDiagram
        + setHeight(height : int) : void
        + equals(obj : Object) : boolean
        + toString() : String
+       + printEncouragingMessage() : void*
    }
 
 
