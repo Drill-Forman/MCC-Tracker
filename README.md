@@ -97,6 +97,19 @@ classDiagram
        + toString() : String
    }
 
+   class PomodoroTimer {
+   - workDuration : int
+   - breakDuration : int 
+   - remainingTime : int 
+   - sessionCount : int
+   - volume : int
+   - isRunning : boolean
+   - workSession : boolean
+   - progress : double
+   - alarmSound : String
+   
+   }
+
 
    HealthTracker <|-- WorkoutTracker : extends
    HealthTracker <|-- DietTracker : extends

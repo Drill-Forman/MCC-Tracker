@@ -1,5 +1,11 @@
+
 public class PomodoroTimer {
-    private int workDuration; 
+    final static int DEFAULT_WORK_DURATION = 25 * 60; //25 mins
+    final static int DEFAULT_BREAK_DURATION = 5 * 60; // 5 mins
+    final static int DEFAULT_VOLUME = 5;
+    final static String DEFAULT_ALARM_SOUND = "Default"; 
+
+    private int workDuration;
     private int breakDuration; 
     private int remainingTime; 
     private int sessionCount;
@@ -12,7 +18,15 @@ public class PomodoroTimer {
 
     private String alarmSound;
 
-    //working on pomodoro branch
+    public PomodoroTimer(int workDuration, int breakDuration, String alarmSound, int volume) {
+        //error checking
+    }
+
+
+
+
+
+    
     
     /**
      * Methods: 
