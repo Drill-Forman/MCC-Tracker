@@ -30,6 +30,7 @@ classDiagram
        + DEFAULT_HEIGHT : int = 100$
        - weight : double
        - height : int
+       - heightOverride : boolean
        + HealthTracker()
        + HealthTracker(weight : double, height : int)
        + HealthTracker(other : HealthTracker)
@@ -38,6 +39,7 @@ classDiagram
        + getHeightInInches() : int
        + getHeight() : String
        + setHeight(height : int) : void
+       + overrideHeight() : void
        + equals(obj : Object) : boolean
        + toString() : String
        + printEncouragingMessage() : void*
@@ -107,7 +109,11 @@ classDiagram
    - workSession : boolean
    - progress : double
    - alarmSound : String
+   }
    
+class UnitMismatchException {
+      + UnitMismatchException()
+      + UnitMismatchException(expected : String)
    }
 
 
