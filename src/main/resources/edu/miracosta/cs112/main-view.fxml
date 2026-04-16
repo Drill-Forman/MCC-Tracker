@@ -13,39 +13,32 @@
      <tabs>
          <Tab text="Home">
              <content>
-                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                  <children>
-                     <Button fx:id="hiButton" layoutX="61.0" layoutY="84.0" mnemonicParsing="false" onAction="#onHelloButtonClicked" text="Hello">
-                        <font>
-                           <Font size="29.0" />
-                        </font>
-                     </Button>
-                  </children></AnchorPane>
+                 <fx:include source="home-view.fxml" />
              </content>
          </Tab>
        <Tab text="Diet Tracker">
          <content>
-           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+             <fx:include source="diet-tracker-view.fxml" />
          </content>
        </Tab>
        <Tab text="Weight Tracker">
          <content>
-           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+             <fx:include source="weight-tracker-view.fxml" />
          </content>
        </Tab>
          <Tab text="Homework Tracker">
              <content>
-                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                 <fx:include source="homework-tracker-view.fxml" />
              </content>
          </Tab>
          <Tab text="Pomodoro Timer">
              <content>
-                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                 <fx:include source="pomodoro-timer-view.fxml" />
              </content>
          </Tab>
          <Tab text="Break Time">
              <content>
-                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                 <fx:include source="break-time-view.fxml" />
              </content>
          </Tab>
      </tabs>
