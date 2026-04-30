@@ -2,6 +2,7 @@ package edu.miracosta.cs112.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+<<<<<<< HEAD
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.input.MouseEvent;
@@ -14,8 +15,18 @@ public class MainController {
     private AnchorPane contentPane;
 
     // Your existing button method (unchanged)
+=======
+import javafx.scene.control.Button;
+
+
+public class MainController {
+
+>>>>>>> 51a43a65bbf714e73a9dba961a4d1a9512827537
     @FXML
-    protected void onHelloButtonClick(ActionEvent actionEvent) {
+    Button hiButton;
+
+    @FXML
+    protected void onHelloButtonClicked(ActionEvent actionEvent) {
         System.out.println("Hello World!");
     }
 
