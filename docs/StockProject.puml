@@ -1,0 +1,45 @@
+@startuml
+
+@startuml
+' This is the magic line for Dark Mode
+!theme black-knight
+
+skinparam classAttributeIconSize 0
+' Optional: Manual override if you want a pure black background
+skinparam backgroundColor #000000
+
+package edu.miracosta.cs112.models {
+    ' ... the rest of your code stays the same ...
+
+skinparam classAttributeIconSize 0
+
+package edu.miracosta.cs112.models {
+    abstract class FinancialInstrument {
+        - ticker : String
+        - price : double
+        + FinancialInstrument(ticker : String, price : double)
+        + {abstract} calculateRisk(vix : double) : double
+        + getTicker() : String
+        + getPrice() : double
+    }
+
+    class YieldStock {
+        - distributionYield : double
+        + YieldStock()
+        + YieldStock(ticker : String, price : double)
+        + YieldStock(ticker : String, price : double, yield : double)
+        + getDistributionYield() : double
+        + setDistributionYield(yield : double) : void
+        + calculateRisk(vix : double) : double
+        + toString() : String
+        + equals(o : Object) : boolean
+    }
+}
+
+class YieldTester {
+    + {static} main(args : String[]) : void
+}
+
+FinancialInstrument <|-- YieldStock : extends
+YieldTester ..> YieldStock : tests
+@enduml
