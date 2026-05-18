@@ -1,118 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<<<<<<< HEAD
-<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 
-<VBox alignment="CENTER"
-      prefHeight="455.0"
-      prefWidth="626.0"
-      spacing="20.0"
-      xmlns="http://javafx.com/javafx/17.0.12"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="edu.miracosta.cs112.controllers.MainController">
-
-    <padding>
-        <Insets bottom="20.0"
-                left="20.0"
-                right="20.0"
-                top="20.0" />
-    </padding>
-
-    <Label fx:id="welcomeText" />
-
-    <Button onAction="#onHelloButtonClick"
-            text="Hello!" />
-
-    <!-- CONTENT AREA (opens above buttons) -->
-    <AnchorPane fx:id="contentPane"
-                prefHeight="200.0"
-                VBox.vgrow="ALWAYS" />
-
-    <!-- BUTTON BAR -->
-    <HBox prefHeight="130.0"
-          prefWidth="428.0"
-          spacing="10">
-
-        <children>
-
-            <Rectangle fx:id="square1"
-                       onMouseClicked="#handleSquareClick"
-                       arcHeight="5.0"
-                       arcWidth="5.0"
-                       fill="DODGERBLUE"
-                       height="126.0"
-                       stroke="BLACK"
-                       strokeType="INSIDE"
-                       width="131.0" />
-
-            <Rectangle fx:id="square2"
-                       onMouseClicked="#handleSquareClick"
-                       arcHeight="5.0"
-                       arcWidth="5.0"
-                       fill="DODGERBLUE"
-                       height="126.0"
-                       stroke="BLACK"
-                       strokeType="INSIDE"
-                       width="131.0" />
-
-            <Rectangle fx:id="square3"
-                       onMouseClicked="#handleSquareClick"
-                       arcHeight="5.0"
-                       arcWidth="5.0"
-                       fill="DODGERBLUE"
-                       height="126.0"
-                       stroke="BLACK"
-                       strokeType="INSIDE"
-                       width="131.0" />
-
-        </children>
-
-    </HBox>
-
-</VBox>
-=======
-<?import javafx.scene.text.*?>
-
-<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.miracosta.cs112.controllers.MainController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
-   <TabPane tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
-     <tabs>
-         <Tab text="Home">
-             <content>
-                 <fx:include source="home-view.fxml" />
-             </content>
-         </Tab>
-       <Tab text="Diet Tracker">
-         <content>
-             <fx:include source="diet-tracker-view.fxml" />
-         </content>
-       </Tab>
-       <Tab text="Weight Tracker">
-         <content>
-             <fx:include source="weight-tracker-view.fxml" />
-         </content>
-       </Tab>
-         <Tab text="Homework Tracker">
-             <content>
-                 <fx:include source="homework-tracker-view.fxml" />
-             </content>
-         </Tab>
-         <Tab text="Pomodoro Timer">
-             <content>
-                 <fx:include source="pomodoro-timer-view.fxml" />
-             </content>
-         </Tab>
-         <Tab text="Break Time">
-             <content>
-                 <fx:include source="break-time-view.fxml" />
-             </content>
-         </Tab>
-     </tabs>
-   </TabPane>
-</VBox>
->>>>>>> 51a43a65bbf714e73a9dba961a4d1a9512827537
+<BorderPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.miracosta.cs112.controllers.MainApplicationController">
+   <center>
+      <TabPane fx:id="mainTabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Home">
+               <content>
+                  <AnchorPane fx:id="homeTabContent" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+          </Tab>
+          <Tab text="Stock Tracker">
+               <content>
+                  <AnchorPane fx:id="stockTrackerTabContent" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+          </Tab>
+            <Tab text="Settings">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
