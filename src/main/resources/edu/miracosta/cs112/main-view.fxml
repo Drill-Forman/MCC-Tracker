@@ -16,7 +16,7 @@
           </Tab>
           <Tab text="Stock Tracker">
                <content>
-                  <AnchorPane fx:id="stockTrackerTabContent" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  <fx:include fx:id="stockTrackerTabContent" source="Yield-View.fxml" />
                </content>
           </Tab>
             <Tab text="Settings">
